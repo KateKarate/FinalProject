@@ -1,0 +1,17 @@
+/* Import the Nanum Brush Script font */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
+body {
+  font-family: 'Nanum Brush Script', cursive;
+  font-size: 48px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
