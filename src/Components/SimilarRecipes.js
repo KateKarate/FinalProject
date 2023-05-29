@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import RecipeList from './RecipeList';
-import SimilarRecipeDetails from './SimilarRecipeDetails';
+import RecipeDetails from './RecipeDetails';
 
 const SimilarRecipes = ({
   recipe,
@@ -30,15 +30,16 @@ const SimilarRecipes = ({
   return (
     <div className="similar-recipes">
       {selectedSimilarRecipe ? (
-        <SimilarRecipeDetails
+        <RecipeDetails
           recipe={selectedSimilarRecipe}
           onAddToFavorites={onAddToFavorites}
-          onGoBack={onGoBack}
+          onGoBack={handleGoBack}
+          onSimilarRecipes={handleSimilarRecipeSelect}
         />
       ) : (
         <>
           <h2 className="similar-recipes-title">Similar Recipes</h2>
-          <button className="similar-recipes-button" onClick={handleGoBack}>
+          <button className="go-back-button" onClick={handleGoBack}>
             Go Back
           </button>
           <RecipeList

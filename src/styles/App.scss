@@ -1,3 +1,9 @@
+h1.app-title {
+  font-size: 4rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
 /* RecipeSearch component */
 .recipe-search {
     display: flex;
@@ -8,25 +14,36 @@
     text-align: center;
   }
   
-  .recipe-search-label {
-    font-size: 1.2rem;
+  .recipe-search-label,
+  .favorites-empty {
+    font-size: 2rem;
     margin-bottom: 1rem;
   }
   
-  .recipe-search-input {
+  .recipe-search-input,
+  .recipe-search-select {
+    font-family: 'Nanum Brush Script', cursive;
+    text-align: center;
+    display: block;
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 2rem;
     border-radius: 8px;
-    border: none;
-    outline: none;
+    border: 0.5px solid;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+  }
+
+  .recipe-search-input {
+    display: block;
   }
   
   .recipe-search-button {
+    font-family: 'Nanum Brush Script', cursive;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #c4dfdf;
+    font-size: 2rem;
+    background-color: #eec9d2;
     color: #fff;
-    border: none;
+    border: solid 0.5px;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -64,39 +81,40 @@
   
   /* Error component */
   .error {
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: #ff0000;
     text-align: center;
   }
   
   /* RecipeList component */
-  .recipe-list {
-    display: flex;
+  .recipe-item {
+    display: block;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 1rem;
   }
   
-  .recipe-list-item {
+  .recipe-list-item,
+  button.recipe-details-button {
+    font-family: 'Nanum Brush Script', cursive;
     text-align: center;
-  }
-  
-  .recipe-list-item button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
     background-color: #c4dfdf;
     color: #fff;
-    border: none;
+    border: 1px solid;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+  }
+
+  button.recipe-details-button {
+    margin: 1rem;
   }
   
-  .recipe-list-item button:hover {
-    background-color: #d2e9e9;
+  .recipe-list-item:hover {
+    background-color: #eec9d2;
   }
   
   /* Favorites component */
@@ -106,7 +124,8 @@
   }
   
   .favorites-title {
-    font-size: 1.5rem;
+    font-size: 3rem;
+    margin: 1rem;
   }
   
   .favorites-list {
@@ -115,22 +134,25 @@
     margin: 0;
   }
   
-  .favorites-list-item {
-    margin-bottom: 1rem;
+  .favorites-item {
+    font-size: 2rem;
   }
   
-  .favorites-list-item button {
+  .favorites-button,
+  .go-back-button {
+    font-family: 'Nanum Brush Script', cursive;
     padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #c4dfdf;
+    margin: 1rem;
+    font-size: 2rem;
+    background-color: #eec9d2;
     color: #fff;
-    border: none;
+    border: 1px solid;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
   }
   
-  .favorites-list-item button:hover {
+  .favorites-button:hover,
+  .go-back-button:hover {
     background-color: #d2e9e9;
   }
   
@@ -144,61 +166,48 @@
     font-size: 1.5rem;
   }
   
-  .recipe-details-image {
+  img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px;
     margin-bottom: 1rem;
-  }
+    transition: transform 0.3s, cursor 0.3s;
+}
+
+  img:hover {
+    transform: scale(1.7);
+    cursor: pointer;
+}
   
   .recipe-details-info {
-    margin-bottom: 1rem;
+    margin: 1rem;
+    font-size: 2rem;
+  }
+
+  .recipe-details-subtitle,
+  .recipe-instructions-subtitle {
+    font-size: 3rem;
+    margin: 1rem;
   }
   
-  .recipe-details-ingredients {
-    text-align: left;
-    margin-bottom: 1rem;
-  }
-  
-  .recipe-details-ingredients-list {
+  .recipe-details-list {
+    font-size: 2.5rem;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    margin: 1rem;
   }
-  
-  .recipe-details-ingredients-list-item {
-    margin-bottom: 0.5rem;
+
+  .recipe-instructions-subtitle {
+    margin-top: 5rem;
   }
-  
-  .recipe-details-instructions {
-    text-align: left;
-    margin-bottom: 1rem;
-  }
-  
-  .recipe-details-instructions-list {
+
+  .recipe-instruction-list {
     list-style: decimal;
-    padding: 0;
-    margin: 0;
+    font-size: 2.5rem;
+    margin: 1rem;
   }
   
-  .recipe-details-instructions-list-item {
-    margin-bottom: 0.5rem;
-  }
-  
-  .recipe-details-button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    background-color: #c4dfdf;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-right: 1rem;
-  }
-  
-  .recipe-details-button:hover {
-    background-color: #d2e9e9;
+  button.recipe-details-button:hover {
+    background-color: #eec9d2;
   }
   
   /* SimilarRecipes component */
@@ -296,7 +305,6 @@
   
   /* Media queries */
   @media screen and (max-width: 1920px) {
-    /* Adjust styles for screens up to 1920px width */
     .app {
       max-width: 90%;
       margin: 0 auto;
@@ -318,7 +326,7 @@
   }
   
   @media screen and (max-width: 1024px) {
-    /* Adjust styles for screens up to 1024px width */
+
     .app-title {
       font-size: 2rem;
     }
@@ -330,7 +338,6 @@
   }
   
   @media screen and (max-width: 768px) {
-    /* Adjust styles for screens up to 768px width */
     .recipe-search-label {
       font-size: 1rem;
     }
@@ -348,7 +355,6 @@
   }
   
   @media screen and (max-width: 480px) {
-    /* Adjust styles for screens up to 480px width */
     .app-title {
       font-size: 1.5rem;
     }
@@ -376,7 +382,6 @@
   }
   
   @media screen and (max-width: 320px) {
-    /* Adjust styles for screens up to 320px width */
     .app-title {
       font-size: 1.2rem;
     }

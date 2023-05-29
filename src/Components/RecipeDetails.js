@@ -25,9 +25,7 @@ const RecipeDetails = ({
     <div className="recipe-details">
       <h2 className="recipe-details-title">{recipe.title}</h2>
       {recipe.image && (
-        <div className="recipe-details-image">
-          <img src={recipe.image} alt={recipe.title} />
-        </div>
+          <img className="recipe-details-image" src={recipe.image} alt={recipe.title} />
       )}
       <p className="recipe-details-info">Ready in: {recipe.readyInMinutes} minutes</p>
       <p className="recipe-details-info">Servings: {recipe.servings}</p>
@@ -38,8 +36,8 @@ const RecipeDetails = ({
             <li className="recipe-details-item" key={ingredient.id}>{ingredient.original}</li>
           ))}
       </ul>
-      <h3 className="recipe-details-subtitle">Instructions:</h3>
-      <ol className="recipe-details-list">
+      <h3 className="recipe-instructions-subtitle">Instructions:</h3>
+      <ol className="recipe-instruction-list">
         {recipe.analyzedInstructions &&
           recipe.analyzedInstructions[0].steps.map((step) => (
             <li className="recipe-details-item" key={step.number}>{step.step}</li>

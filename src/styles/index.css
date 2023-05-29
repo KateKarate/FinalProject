@@ -4,6 +4,8 @@ body {
   font-family: "Nanum Brush Script", cursive;
   font-size: 48px;
   text-align: center;
+  background: rgb(238, 201, 210);
+  background: linear-gradient(90deg, rgb(238, 201, 210) 0%, rgb(210, 233, 233) 100%);
 }
 
 .container {

@@ -62,39 +62,39 @@ const RecipeSearch = ({ onSearchByIngredients, onSearchByNutrition }) => {
             value={searchValue}
             onChange={handleInputChange}
             onKeyPress={handleKeyPress}
-            placeholder="Enter ingredients separated by comma"
+            placeholder="Enter ingredients"
           />
         </div>
       ) : (
         <div className="recipe-search-field">
           <label className="recipe-search-label">
-            Minimum Carbs:
             <input
               className="recipe-search-input"
               type="text"
               name="minCarbs"
+              placeholder="Minimum Carbs"
               value={nutrition.minCarbs}
               onChange={handleNutritionChange}
               onKeyPress={handleKeyPress}
             />
           </label>
           <label className="recipe-search-label">
-            Minimum Protein:
             <input
               className="recipe-search-input"
               type="text"
               name="minProtein"
+              placeholder="Minimum Protein"
               value={nutrition.minProtein}
               onChange={handleNutritionChange}
               onKeyPress={handleKeyPress}
             />
           </label>
           <label className="recipe-search-label">
-            Minimum Fat:
             <input
               className="recipe-search-input"
               type="text"
               name="minFat"
+              placeholder="Minimum Fat"
               value={nutrition.minFat}
               onChange={handleNutritionChange}
               onKeyPress={handleKeyPress}
